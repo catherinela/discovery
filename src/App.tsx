@@ -1,13 +1,8 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { FC } from 'react';
+import Layout from './components/layout';
 
-function App() {
-  return (
-    <div className="App">
-      
-    </div>
-  );
-}
+const App: FC = () => (
+    <Layout/>
+)
 
 export default App;
