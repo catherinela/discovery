@@ -1,5 +1,13 @@
-@import '~antd/dist/antd.css';
-.App {
-  text-align: center;
+.app {
+  display: flex;
   height: inherit;
+}
+.sider{
+    width: 250px;
+    background-color: #86838358;
+    padding-top: 20px;
+}
+.page-container{
+    flex: 1;
+    padding-top: 30px;
 }

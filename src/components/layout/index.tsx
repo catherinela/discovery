@@ -1,4 +1,10 @@
 import React from 'react';
+import {
+    BrowserRouter as Router,
+    Routes,
+    Route,
+    Link
+  } from "react-router-dom";
 import { Layout, Menu } from 'antd';
 import {
   MenuUnfoldOutlined,
@@ -16,6 +22,10 @@ interface menuParams {
     enthusiasmLevel?: number;
   }
 
+ const Comp1 = () => <div>coomp1</div>
+ const Comp2 = () => <div>coomp2</div>
+ const Comp3 = () => <div>coomp3</div>
+
 export default class LayoutDemo extends React.Component {
   state = {
     collapsed: false,
@@ -32,40 +42,9 @@ export default class LayoutDemo extends React.Component {
 
   render() {
     return (
-      <Layout style={{height:"100vh"}}>
-        <Sider trigger={null} collapsible collapsed={this.state.collapsed}>
-          <div className="logo" />
-          <Menu theme="dark" mode="inline" defaultSelectedKeys={['1']} onClick={this.handleClick}>
-            <Menu.Item key="1" icon={<UserOutlined />}>
-              nav 1
-            </Menu.Item>
-            <Menu.Item key="2" icon={<VideoCameraOutlined />}>
-              nav 2
-            </Menu.Item>
-            <Menu.Item key="3" icon={<UploadOutlined />}>
-              nav 3
-            </Menu.Item>
-          </Menu>
-        </Sider>
-        <Layout className="site-layout">
-          <Header className="site-layout-background" style={{ padding: 0 }}>
-            {React.createElement(this.state.collapsed ? MenuUnfoldOutlined : MenuFoldOutlined, {
-              className: 'trigger',
-              onClick: this.toggle,
-            })}
-          </Header>
-          <Content
-            className="site-layout-background"
-            style={{
-              margin: '24px 16px',
-              padding: 24,
-              minHeight: 280,
-            }}
-          >
-            Content
-          </Content>
-        </Layout>
-      </Layout>
+       <div className='layout'>
+
+       </div>
     );
   }
 }
