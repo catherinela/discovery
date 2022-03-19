@@ -4,6 +4,9 @@ import WindowSizeComponentByClass from './components/01/listenBrowserSizeByClass
 import WindowSizeComponentByHook from './components/01/listenBrowserSizeByHook'
 import Counter from './components/01/Counter' 
 import BlogCounter from './components/02/useEffect'
+import MemoCounter from './components/innnerHooks/useMemo'
+import RefCounter from './components/innnerHooks/userRef'
+import ContextDemo from './components/innnerHooks/useContext'
 import './App.css'
 
 // const routes = [
@@ -30,6 +33,15 @@ const App: FC = () => (
                 <li>
                     <Link to='/BlogCounter' >BlogCounter</Link>
                 </li>
+                <li>
+                    <Link to='/MemoCounter' >MemoCounter</Link>
+                </li>
+                <li>
+                    <Link to='/RefCounter' >RefCounter</Link>
+                </li>
+                <li>
+                    <Link to='/ContextDemo' >ContextDemo</Link>
+                </li>
             </ul>
         </div>
         <div className='page-container'>
@@ -38,6 +50,9 @@ const App: FC = () => (
                 <Route path="/showWindowByHook" element={<WindowSizeComponentByHook />}/>
                 <Route path="/count" element={<Counter/>}/>
                 <Route path='/BlogCounter' element={<BlogCounter/>}/>
+                <Route path='/MemoCounter' element={<MemoCounter/>}/>
+                <Route path='/RefCounter' element={<RefCounter/>}/>
+                <Route path='/ContextDemo' element={<ContextDemo/>}/>
             </Routes>
         </div>
     </div>
